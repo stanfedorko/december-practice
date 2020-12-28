@@ -1,22 +1,50 @@
 
+//- 13
 
-const numberOfFilms = +prompt('How many films do you watch?', '');
+// if (4 == 9) {
+//   console.log('Ok!');
+// } else {
+//   console.log('Error');
+// }
 
-const personalMovieDB = {
-  count: numberOfFilms,
-  movies: {},
-  actors: {},
-  genres: [],
-  privat: false
-};
 
-const a = prompt('What was the last movie you watched?', ''),
-      b = prompt('Set the rating of this movie', ''),
-      c = prompt('What was the last movie you watched?', ''),
-      d = prompt('Set the rating of this movie', '');
+const num = 50;
+// if(num < 49) {
+//   console.log('Error');
+// } else if (num > 100) {
+//   console.log('More');
+// } else {
+//   console.log('Ok!');
+// }
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+// (num === 50) ? console.log('Ok!') : console.log('Error');
 
-console.log(personalMovieDB);
+
+switch (num) {
+  case 49:
+    console.log('No');
+    break;
+  case 100:
+    console.log('No');
+    break;
+  case 51:
+    console.log('Right!');
+    break;
+  default:
+    console.log('No, maybe later');
+    break;
+} 
+
+
+
+
+//- end 13
+
+
+
+
+
+
+
+
 
