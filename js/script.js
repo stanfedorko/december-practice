@@ -1,42 +1,73 @@
+//- 18
+let numberOfFilms;
 
-//- 17
+function start () {
+  numberOfFilms = +prompt('How many films do you watch?', '');
 
-const str = "test";
-console.log(str.length);
-const arr = [1, 2, 4];
-console.log(arr.length);
+  while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+    numberOfFilms = +prompt('How many films do you watch?', '');
+  }
+}
+start();
+console.log(numberOfFilms);
 
-console.log(str[2]);
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false
+};
+
+function rememberMyFilms() {
+  for (let i = 0; i < 2; i++) {
+    const a = prompt('What was the last movie you watched?', ''),
+      b = prompt('Set the rating of this movie', '');
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+      personalMovieDB.movies[a] = b;
+      console.log('done');
+    } else {
+      console.log('error');
+      i--;
+    }
+  }
+}
+// rememberMyFilms();
+
+function detectPersonalLevel() {
+  if (personalMovieDB.count < 10) {
+    console.log('you have seen few films');
+  } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log('you are a classic spectator');
+  } else if (personalMovieDB.count >= 30) {
+    console.log('you are a movie fan');
+  } else {
+    console.log('error');
+  }
+}
+
+// detectPersonalLevel();
 
 
-console.log(str.toLocaleUpperCase());
-console.log(str);
+function showMyDB(hidden) {
+  if (!hidden) {
+    console.log(personalMovieDB);
+  }
+}
 
-const fruit = "Some fruit";
-console.log(fruit.indexOf('fruit'));
+showMyDB(personalMovieDB.privat);
 
-const logg = "Hello world";
-console.log(logg.slice(6, 11));
-console.log(logg.slice(6, 9));
+// function writeYouGenres() {
+//   for (let i = 1; i <= 3; i++) {
+//     const genre = prompt(`Your favorite genre number ${i}`);
+//     personalMovieDB.genres[i - 1] = genre;
+//   }
+// }
+function writeYouGenres() {
+  for (let i = 1; i <= 3; i++) {
+    personalMovieDB.genres[i - 1] = prompt(`Your favorite genre number ${i}`);
+  }
+}
+writeYouGenres();
 
-console.log(logg.substring(6, 11));
-console.log(logg.substr(6, 5));
-
-const num =12.2;
-console.log(Math.round(num));
-
-const test2 = "15.2px";
-console.log(parseInt(test2));
-console.log(parseFloat(test2));
-
-
-//- end 17
-
-
-
-
-
-
-
-
-
+//- end 18
