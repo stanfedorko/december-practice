@@ -1,48 +1,58 @@
-//- 26
+//- 27
 
-// To string
-// 1
-console.log(typeof(String(null)));
-console.log(typeof(String(4)));
+// let x = 5; alert( x++ );
+
 
 // 2
-console.log(typeof(5 + ""));
-const num = 5;
-console.log("https://vk.com/catalog/" + num);
-const fontSize = 26 + 'px';
+// [] + false - null + true
+// console.log(typeof([] + false)); // "false"
+// console.log([] + false - null + true); // "NaN"
 
-
-// To number
-// 1
-console.log(typeof(Number('4')));
-// 2
-console.log(typeof(+'5'));
-// 3
-console.log(typeof(parseInt("15px", 10)));
-
-let answ = +prompt("Hello", "");
-
-
-
-// To boolean
-// false: 0, '', null, undefiend, NaN;
-// 1
-let switcher = null;
-if (switcher) {
-  console.log('Working...');
-}
-switcher = 1;
-if (switcher) {
-  console.log('Working...');
-}
-
-// 2
-console.log(typeof(Boolean('4')));
 
 // 3
-console.log(typeof(!!"55555"));
+// let y = 1; 
+// let x = y = 2;
+// console.log(x);
 
 
+// 4
+// console.log([] + 1 + 2); // "12"
 
 
-//- end 26
+// 5
+// alert( "1234"[2] ); // 3
+
+
+// 6
+// console.log(2 && 1 && null && 0 && undefined); // null
+// && stop on false
+// || stop on true
+
+
+// 7
+// console.log(!! ( 1 && 2 ) === ( 1 && 2)); // false
+
+
+// 8 
+// alert( null || 2 && 3 || 4 ); // 3
+
+
+// 9 / a == b?
+// const a = [1, 2, 3];
+// const b = [1, 2, 3];
+// console.log( a == b ); // false
+
+
+// 10
+// alert( +'Infinity' ); // Infinity
+
+
+// 11
+// console.log( "Ёжик" > "яблоко" ); // false
+
+
+// 12
+console.log( 0 || "" || 2 || undefined || true || false ); // 2
+
+
+//- end 27
